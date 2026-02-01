@@ -1,1 +1,194 @@
-TEST
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BunBun's Cafe | Staff Information</title>
+
+<style>
+:root{
+  --pink1:#ff6bb6;
+  --pink2:#ff4fa3;
+  --pink3:#ff8fca;
+  --white:#ffffff;
+  --dark:#3a2a34;
+  --border:#ffd1e6;
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family:"Segoe UI", system-ui, sans-serif;
+}
+
+body{
+  background:
+    radial-gradient(circle at top, rgba(255,143,202,.35), transparent 60%),
+    linear-gradient(135deg, #fff7fc, #ffd9ec, #ffb9dc);
+  color:var(--dark);
+  min-height:100vh;
+  overflow-x:hidden;
+}
+
+header{
+  padding:80px 20px 60px;
+  text-align:center;
+  animation:fadeDown 1.2s ease;
+}
+
+header h1{
+  font-size:clamp(2.2rem,5vw,3.6rem);
+  background:linear-gradient(90deg,var(--pink1),var(--pink2),var(--pink1));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:0 10px 30px rgba(0,0,0,.18);
+}
+
+header p{
+  margin-top:18px;
+  font-size:1.1rem;
+  opacity:.88;
+}
+
+section{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 22px;
+}
+
+.card{
+  background:rgba(255,255,255,.95);
+  border-radius:26px;
+  padding:48px;
+  box-shadow:
+    0 25px 70px rgba(0,0,0,.12),
+    inset 0 0 0 1px rgba(255,79,163,.30);
+  animation:fadeUp 1.2s ease;
+}
+
+.card + .card{
+  margin-top:70px;
+}
+
+.card h2{
+  font-size:clamp(1.8rem,4vw,2.6rem);
+  margin-bottom:26px;
+  background:linear-gradient(90deg,var(--pink2),var(--pink1));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.card p{
+  font-size:1.05rem;
+  line-height:1.9;
+  margin-bottom:28px;
+}
+
+.button-wrap{
+  display:flex;
+  justify-content:flex-start;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+a.button{
+  text-decoration:none;
+  padding:16px 34px;
+  border-radius:50px;
+  font-weight:800;
+  color:#fff;
+  background:linear-gradient(135deg,var(--pink1),var(--pink2),var(--pink3));
+  box-shadow:
+    0 12px 28px rgba(0,0,0,.22),
+    inset 0 0 0 1px rgba(255,255,255,.38);
+  transition:.35s ease;
+  position:relative;
+  overflow:hidden;
+}
+
+a.button::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(120deg, transparent, rgba(255,255,255,.65), transparent);
+  transform:translateX(-100%);
+  transition:.6s ease;
+}
+
+a.button:hover::after{
+  transform:translateX(100%);
+}
+
+a.button:hover{
+  transform:translateY(-3px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,.30);
+}
+
+footer{
+  padding:40px 20px 60px;
+  text-align:center;
+  font-size:.9rem;
+  opacity:.75;
+}
+
+/* Animations */
+@keyframes fadeDown{
+  from{opacity:0; transform:translateY(-40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(60px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Mobile polish */
+@media(max-width:700px){
+  .card{
+    padding:34px 26px;
+  }
+  header{
+    padding:60px 18px 40px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>BunBun's Cafe</h1>
+  <p>Official Staff Information & Oversight Portal</p>
+</header>
+
+<section>
+
+  <div class="card">
+    <h2>Employee Database</h2>
+    <p>
+      The BunBun's Cafe Employee Database serves as the centralized operational hub
+      for staff management, internal coordination, and accountability across the
+      organization. Through this portal, authorized personnel can securely access
+      employee profiles, review internal records, manage roles and departments,
+      and ensure professional standards are upheld across all staff operations.
+      Access is protected through credential-based authentication, with permissions
+      assigned according to role and responsibility. System activity is monitored
+      and reviewable to preserve transparency, traceability, and organizational integrity.
+    </p>
+
+    <div class="button-wrap">
+      <!-- Replace this URL with your BunBun's Cafe Employee Database Web App URL -->
+      <a class="button" href="https://script.google.com/macros/s/AKfycbyIXXK_-MczRbnqfj8YPmtuhOB81LEvEAoMllEbZrO_CQKFyG8DGAm8Y3ZajIgCiXkN/exec" target="_blank" rel="noopener">
+        Enter Employee Database
+      </a>
+    </div>
+  </div>
+
+</section>
+
+<footer>
+  © The Robloxian Franchise Network • Systems monitored and protected
+</footer>
+
+</body>
+</html>
